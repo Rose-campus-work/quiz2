@@ -23,6 +23,10 @@ public class Calculator
    }
 
    public int[] incrementArrays(int[] values){
-      return new int[3];
+      int[] newValues = new int[values.length];
+      for(int i = 0; i < values.length; i++){
+         newValues[i] = values[i] + 1;
+      }
+      return newValues;
    }
 }
