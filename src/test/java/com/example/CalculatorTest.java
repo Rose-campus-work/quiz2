@@ -44,7 +44,7 @@ public class CalculatorTest {
 
     @Test 
     public void testIsOdd() {
-        boolean actual = calculator.isEven(5);
+        boolean actual = calculator.isEven(3);
         assertTrue(!actual);
     }
 }
