@@ -2,6 +2,7 @@ package com.example;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
 public class CalculatorTest {
@@ -46,5 +47,12 @@ public class CalculatorTest {
     public void testIsOdd() {
         boolean actual = calculator.isEven(3);
         assertTrue(!actual);
+    }
+
+    @Test 
+    public void testIncrementArrays() {
+        int[] expected = new int[]{2, 3, 4};
+        int[] actual = calculator.incrementArrays(new int[]{1, 2, 3});
+        assertArrayEquals(expected, actual);
     }
 }

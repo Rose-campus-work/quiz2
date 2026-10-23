@@ -21,4 +21,8 @@ public class Calculator
    public boolean isEven(int i){
       return i % 2 == 0;
    }
+
+   public int[] incrementArrays(int[] values){
+      return new int[3];
+   }
 }
