@@ -1,20 +1,16 @@
 package com.example;
 
-import static org.junit.Assert.assertTrue;
-
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
-public class CalculatorTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
+public class CalculatorTest {
+    Calculator calculator = new Calculator();
+
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void testSum() {
+        int expected = -1;
+        int actual = 2;
+        assertEquals(expected, actual);
+
     }
 }
