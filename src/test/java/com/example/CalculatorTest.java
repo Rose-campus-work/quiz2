@@ -13,4 +13,25 @@ public class CalculatorTest {
         assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void testSubtract() {
+        int expected = -1;
+        int actual = calculator.subtract(1, 2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testMultiply() {
+        int expected = 27;
+        int actual = calculator.multiply(3, 9);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDivide() {
+        int expected = 3;
+        int actual = calculator.divide(15, 5);
+        assertEquals(expected, actual);
+    }
 }
