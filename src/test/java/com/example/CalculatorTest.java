@@ -1,6 +1,7 @@
 package com.example;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class CalculatorTest {
@@ -33,5 +34,17 @@ public class CalculatorTest {
         int expected = 3;
         int actual = calculator.divide(15, 5);
         assertEquals(expected, actual);
+    }
+
+    @Test 
+    public void testIsEven() {
+        boolean actual = calculator.isEven(4);
+        assertTrue(actual);
+    }
+
+    @Test 
+    public void testIsOdd() {
+        boolean actual = calculator.isEven(5);
+        assertTrue(!actual);
     }
 }
