@@ -1,8 +1,7 @@
 package com.example;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.Test;
 
 public class CalculatorTest {
@@ -54,5 +53,12 @@ public class CalculatorTest {
         int[] expected = new int[]{2, 3, 4};
         int[] actual = calculator.incrementArrays(new int[]{1, 2, 3});
         assertArrayEquals(expected, actual);
+    }
+
+    @Test 
+    public void testDivideByZero() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            calculator.divide(1, 0);
+        });
     }
 }
