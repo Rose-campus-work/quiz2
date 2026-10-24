@@ -23,9 +23,16 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSubtract2() {
+        int expected = -5;
+        int actual = calculator.subtract(-3, 2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void testMultiply() {
-        int expected = 27;
-        int actual = calculator.multiply(3, 9);
+        int expected = -27;
+        int actual = calculator.multiply(-3, 9);
         assertEquals(expected, actual);
     }
 
@@ -37,6 +44,11 @@ public class CalculatorTest {
     }
 
     @Test 
+    public void testDivideByZero() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {calculator.divide(1, 0);});
+    }
+
+    @Test 
     public void testIsEven() {
         boolean actual = calculator.isEven(4);
         assertTrue(actual);
@@ -45,7 +57,7 @@ public class CalculatorTest {
     @Test 
     public void testIsOdd() {
         boolean actual = calculator.isEven(3);
-        assertTrue(!actual);
+        assertFalse(actual);
     }
 
     @Test 
@@ -55,10 +67,4 @@ public class CalculatorTest {
         assertArrayEquals(expected, actual);
     }
 
-    @Test 
-    public void testDivideByZero() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            calculator.divide(1, 0);
-        });
-    }
 }
